@@ -1,0 +1,118 @@
+.c-button {
+  display: inline-block;
+  background: transparent;
+  color: $col-gray;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include media(">tablet") {
+    padding: 5px 80px;
+    }
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 0.2vh;
+    display: block;
+    margin: 3% 0;
+    border-radius: 2em;
+    background: $col-white;
+  }
+
+
+  .c-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &__inner {
+      display: flex;
+      transform: translateY(0);
+      // transition: transform 0.3s ease-out;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      margin-right: 2px;
+
+      >span {
+        /* white-space: nowrap; */
+      }
+    }
+
+    &__anim {
+      /* white-space: nowrap; */
+      position: absolute;
+      top: 100%;
+      display: none;
+      font-family: $font-sauce;
+
+      @media (any-pointer: fine) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &:hover {
+    @media (any-pointer: fine) {
+      .c-link__inner {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+.c-infinite {
+  .c-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &__inner {
+      display: flex;
+      transform: translateY(-100%);
+      animation: infiniteArrow 1s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      >span {
+
+      }
+    }
+
+    &__anim {
+      /* white-space: nowrap; */
+      position: absolute;
+      top: 100%;
+    }
+  }
+
+
+  @keyframes infiniteArrow {
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+.social-visit {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 35px;
+  width: 50%;
+  border: none;
+  cursor: pointer;
+  @include media("<=phone") {
+    width: 30%;
+    padding: 5px 15px;
+    }
+  @include media(">tablet") {
+    width: 30%;
+    }
+}
+
+
+

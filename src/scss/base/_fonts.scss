@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Open Sauce";
+  src: url("../fonts/opensauce-medium.woff2") format("woff2"),
+    url("../fonts/opensauce-medium.woff2") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sauce";
+  src: url("../fonts/opensauce-regular.woff2") format("woff2"),
+    url("../fonts/opensauce-regular.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url("../fonts/MarkPro-Heavy.woff") format("woff"),
+    url("../fonts/MarkPro-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calibre-SemiBold';
+  src:url('../fonts/Calibre/Calibre-SemiBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Calibre-Medium';
+  src:url('../fonts/Calibre/Calibre-Medium.woff') format('woff'),
+      url('../fonts/Calibre/Calibre-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Calibre-Regular';
+  src:url('../fonts/Calibre/Calibre-Regular.woff') format('woff'),
+      url('../fonts/Calibre/Calibre-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+//fonts
+$primary-font-regular: 'Calibre-Regular', sans-serif;
+$primary-font-medium: 'Calibre-Medium', sans-serif;
+$secondary-font: 'MarkPro', sans-serif;
