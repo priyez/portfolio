@@ -9,10 +9,10 @@ const projects = [
         link: "https://wishly.fun"
     },
     {
-        name: "Bucket List",
-        description: "A web-based application to manage and organize your travel destinations.",
-        image: "/travel.png",
-        link: "https://travel-bucket-list-eight.vercel.app/"
+        name: "Gen Invoice",
+        description: "AI-powered invoicing platform designed for freelancers and creative agencies",
+        image: "/geninvoice.png",
+        link: "https://www.geninvoice.online"
     },
     {
         name: "Accesspay",
