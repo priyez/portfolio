@@ -5,34 +5,31 @@ const projects = [
     {
         name: "Wishly",
         description: "Create and send premium digital greeting cards.",
-        image: "/wishly.png",
         link: "https://wishly.fun"
     },
     {
-        name: "Gen Invoice",
-        description: "AI-powered invoicing platform designed for freelancers and creative agencies",
-        image: "/geninvoice.png",
-        link: "https://www.geninvoice.online"
+        name: "Signalhog",
+        description: "Real-time communication and signaling platform.",
+        link: "https://signalhog-web.vercel.app"
     },
     {
-        name: "Accesspay",
-        description: "A fintech app to pay utility bills, manage subscriptions, play game and earn.",
-        image: "/accesspay.png",
-        link: "https://accesspay.com.ng/"
+        name: "SnapForge",
+        description: " Dashboard and tooling platform for managing workflows and automation.",
+        link: "https://snapforge-dashboard.vercel.app"
     }
 ];
 
 export default function ProjectList() {
     return (
         <div className="mt-10 w-full">
-            <h3 className="text-lg">Projects</h3>
+            <h3 className="sectionTitle opacity-60 text-lg my-2 font-bold">Projects</h3>
+               <hr className="border-white/20" />
             <div className="grid grid-cols-1 gap-4 mt-3">
                 {projects.map((project) => (
                     <ProjectCard
                         key={project.name}
                         name={project.name}
                         description={project.description}
-                        image={project.image}
                         link={project.link}
                     />
                 ))}

@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Spotify auth helper files
+/scripts
+spotify-auth.html
+
 # vercel
 .vercel
 

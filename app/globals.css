@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+em {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0;
+}
+
+.displayName {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 0 0.5rem;
+  font-size: clamp(3.5rem, 11vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--foreground);
+}
+
+.sectionTitle {
+  font-family: "Instrument Serif", serif;
+}

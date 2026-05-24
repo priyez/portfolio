@@ -1,31 +1,41 @@
-import React from 'react';
+
 
 interface ProjectCardProps {
     name: string;
     description: string;
-    image: string;
     link: string;
 }
 
-export default function ProjectCard({ name, description, image, link }: ProjectCardProps) {
+export default function ProjectCard({ name, description, link }: ProjectCardProps) {
     return (
-        <a
-            className="border border-white/5 p-1 rounded-xl hover:bg-white/5 transition-colors flex items-center"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <div className="size-14 rounded-lg border border-white/5 flex items-center justify-center">
-                <img
-                    src={image}
-                    alt={name}
-                    className="w-10 object-contain"
-                />
-            </div>
-            <div className="p-1 text-sm mx-1">
-                <h4 className="mt-2">{name}</h4>
-                <p className="mt-1 font-light">{description}</p>
-            </div>
-        </a>
+        <div>
+            <a
+                className="p-1 hover:bg-white/5 transition-colors flex items-center justify-between"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div className="p-1 text-sm mx-1">
+                    <h3 className="mt-2 font-bold">{name}</h3>
+                    <p className="mt-1 font-light opacity-60">{description}</p>
+                </div>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-2 shrink-0 opacity-60"
+                >
+                    <path d="M7 17 17 7" />
+                    <path d="M8 7h9v9" />
+                </svg>
+            </a>
+            <hr className="border-white/20" />
+        </div>
     );
 }
