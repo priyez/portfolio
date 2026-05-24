@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ContactLinks() {
     return (
-        <div className="flex opacity-60 items-center space-x-6 mt-10">
+        <div className="flex opacity-60 px-2 md:px-0 items-center space-x-6 mt-10">
             <a
                 href="mailto:sopiriyejamabo@gmail.com"
                 target="_blank"

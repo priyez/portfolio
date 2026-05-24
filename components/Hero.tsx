@@ -22,12 +22,12 @@ export default function Hero() {
     }, []);
 
     return (
-        <div>
-           <h1 className="displayName text-2xl">
-          Sopiriye<br/>
-          <em className="opacity-60">Jamabo</em>
-        </h1>
-        <h4 className="text-base uppercase font-regular  opacity-60">Software Engineer</h4>
+        <div className="px-2 -md:px-0">
+            <h2 className="displayName text-[20px]">
+                Sopiriye<br />
+                <em className="opacity-60">Jamabo</em>
+            </h2>
+            <h4 className="text-xs uppercase font-regular  opacity-60">Software Engineer</h4>
             <div className="mt-10 space-y-6 text-base font-light">
                 <p>
                     I build scalable products & real-world solutions across web, mobile platforms.
@@ -37,17 +37,16 @@ export default function Hero() {
                                 key={index}
                                 src={image.src}
                                 alt={image.alt}
-                                className={`absolute w-full h-full object-cover transition-opacity duration-500 ${
-                                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                                }`}
+                                className={`absolute w-full h-full object-cover transition-opacity duration-500 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                                    }`}
                             />
                         ))}
                     </span>
                 </p>
                 <Music />
-              
+
                 <p>
-                    Currently Available for collaboration from December.   Drop a mail
+                    Currently Available for collaboration.   Drop a mail
                     <span className="inline-flex items-center align-middle">
                         <a
                             href="mailto:sopiriyejamabo@gmail.com"

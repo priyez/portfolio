@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface Track {
     isPlaying: boolean;
@@ -12,9 +12,27 @@ interface Track {
     songUrl?: string;
 }
 
+const colors = [
+    '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+    '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+    '#F8B500', '#FF69B4', '#00CED1', '#FF7F50', '#9370DB'
+];
+
+function useRandomColor(seed: string) {
+    return useMemo(() => {
+        let hash = 0;
+        for (let i = 0; i < seed.length; i++) {
+            hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        const index = Math.abs(hash) % colors.length;
+        return colors[index];
+    }, [seed]);
+}
+
 export default function Music() {
     const [track, setTrack] = useState<Track | null>(null);
     const [loading, setLoading] = useState(true);
+    const trackColor = useRandomColor(track?.name || 'default');
 
     useEffect(() => {
         async function fetchNowPlaying() {
@@ -66,11 +84,12 @@ export default function Music() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="capitalize hover:underline"
+                    style={{ color: trackColor }}
                 >
                     {track.name}
                 </a>
                 &nbsp;-&nbsp;
-                <span className="capitalize opacity-60">
+                <span className="capitalize opacity-60"  style={{ color: trackColor }}>
                     {track.artist}
                 </span>
             </p>
