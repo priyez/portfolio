@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ContactLinks from "@/components/ContactLinks";
 import ProjectList from "@/components/ProjectList";
 import Music from "@/components/Music";
+import IceBreaker from "@/components/IceBreaker";
 
 export default function Home() {
   const jsonLd = {
@@ -56,10 +57,10 @@ export default function Home() {
           <div>
             <Hero />
             <ContactLinks />
-         
+
           </div>
           <ProjectList />
-
+          <IceBreaker />
         </main>
       </div>
     </>
