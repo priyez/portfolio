@@ -89,7 +89,7 @@ export default function Music() {
                     {track.name}
                 </a>
                 &nbsp;-&nbsp;
-                <span className="capitalize opacity-60"  style={{ color: trackColor }}>
+                <span className="capitalize opacity-60" >
                     {track.artist}
                 </span>
             </p>
